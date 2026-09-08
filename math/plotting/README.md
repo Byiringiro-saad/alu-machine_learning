@@ -34,6 +34,7 @@ directory generates one plot from a small dataset built with `numpy`.
 | `4-frequency.py` | Histogram of student grades with bins every 10 units |
 | `5-all_in_one.py` | The five previous plots arranged in a single 3x2 figure |
 | `6-bars.py` | Stacked bar chart of fruit owned by each person |
+| `100-gradient.py` | Scatter plot of mountain elevation with a colorbar (advanced) |
 
 ## Usage
 
