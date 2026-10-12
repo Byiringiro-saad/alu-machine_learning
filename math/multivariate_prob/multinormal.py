@@ -37,6 +37,6 @@ class MultiNormal:
             raise ValueError("x must have the shape ({}, 1)".format(d))
         deviation = x - self.mean
         exponent = np.matmul(
-            np.matmul(deviation.T, np.linalg.inv(self.cov)), deviation)
+            deviation.T, np.matmul(np.linalg.inv(self.cov), deviation))
         denominator = np.sqrt((2 * np.pi) ** d * np.linalg.det(self.cov))
         return float(np.exp(-exponent[0][0] / 2) / denominator)
