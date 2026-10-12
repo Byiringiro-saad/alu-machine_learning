@@ -33,4 +33,7 @@ def posterior(x, n, p1, p2):
     b = n - x + 1
     integral1 = p1 ** a * special.hyp2f1(a, 1 - b, a + 1, p1) / a
     integral2 = p2 ** a * special.hyp2f1(a, 1 - b, a + 1, p2) / a
-    return (integral2 - integral1) * (1 / special.beta(a, b))
+    probability = (integral2 - integral1) * (1 / special.beta(a, b))
+    if probability < 0:
+        return 0.0
+    return probability
